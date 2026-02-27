@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Background Remover - Professional Photo Editing</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-cut logo-icon"></i>
+                <h1>AI Background Remover</h1>
+            </div>
+            <p class="tagline">Professional-grade background removal in seconds</p>
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-check-circle"></i>
+                    <span>High Precision</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-bolt"></i>
+                    <span>Instant Processing</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <span>Easy Upload</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-download"></i>
+                    <span>Quick Download</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="app-container">
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <h2 class="card-title">Upload Image</h2>
+                </div>
+                
+                <div class="upload-area" id="uploadArea">
+                    <input type="file" id="imageUpload" accept="image/*" class="hidden-input">
+                    <label for="imageUpload" class="upload-btn">
+                        <i class="fas fa-cloud-upload-alt upload-icon"></i>
+                        <div class="upload-text">Click the cloud To select Image</div>
+                        <p class="file-info">Supports JPG, PNG, WEBP (Max 12MB)</p>
+                        <!-- <button class="browse-btn">
+                            <i class="fas fa-folder-open"></i>
+                            Browse Files
+                        </button> -->
+                    </label>
+                </div>
+                
+                <div class="error-message" id="fileError"></div>
+                
+                <div class="api-info">
+                    <p><i class="fas fa-info-circle"></i> Powered by remove.bg API for professional results</p>
+                </div>
+                
+                <div class="controls">
+                    <button id="removeBackgroundBtn" class="action-btn primary" disabled>
+                        <i class="fas fa-cut"></i> Remove Background
+                    </button>
+                    <button id="resetBtn" class="action-btn tertiary">
+                        <i class="fas fa-sync-alt"></i> Reset
+                    </button>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-image"></i>
+                    <h2 class="card-title">Preview Results</h2>
+                </div>
+                
+                <div class="image-preview-container" id="imagePreview">
+                    <canvas id="originalCanvas" class="hidden"></canvas>
+                    <img id="processedImageDisplay" class="hidden" alt="Processed Image">
+                    <div class="loading-overlay hidden" id="loadingOverlay">
+                        <div class="spinner"></div>
+                        <p class="loading-text" id="loadingText">Processing image...</p>
+                    </div>
+                    <p id="previewPlaceholder">Your processed image will appear here</p>
+                </div>
+                
+                <div class="stats">
+                    <div class="stat">
+                        <div class="stat-value" id="fileSize">0 MB</div>
+                        <div class="stat-label">File Size</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value" id="dimensions">0x0</div>
+                        <div class="stat-label">Dimensions</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value" id="format">-</div>
+                        <div class="stat-label">Format</div>
+                    </div>
+                </div>
+                
+                <div class="controls">
+                    <button id="downloadBtn" class="action-btn secondary hidden">
+                        <i class="fas fa-download"></i> Download Result
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+        <p>&copy;2026 Made by <a href="https://www.instagram.com/abubaker_g_1?igsh=MXNzNTBhdWR3eTJtag==">Abubaker Ghaffar</a> with passion-- Team Creative Babar</p>
+
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+                <a href="#">API Documentation</a>
+            </div>
+        </footer>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
